@@ -1,27 +1,26 @@
 # Book settings
 title:
-author: World Bank
+author: World Bank Data Lab
 logo: docs/images/logo.png
 only_build_toc_files: true
 
 repository:
-  url: https://github.com/worldbank/template
+  url: https://github.com/datapartnership/heatwaves
   branch: main
 
 #######################################################################################
 # HTML-specific settings
 html:
-    home_page_in_navbar: false
-    extra_navbar: ""
-    use_edit_page_button: true
-    use_repository_button: true
-    use_issues_button: true
-    baseurl: https://datapartnership.github.io/datapartnership/heatwaves-in-philippines
-    extra_footer: |
-        <div>
-            <b>All content (unless otherwise specified) is subject to the <a href="https://raw.githubusercontent.com/worldbank/template/main/LICENSE">World Bank Master Community License Agreement.</a></b>
-        </div>
-    google_analytics_id: G-ETJ4QT0E4L
+  home_page_in_navbar: true
+  extra_navbar: ""
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  baseurl: https://datapartnership.github.io/heatwaves/PH
+  extra_footer: |
+    <div>
+        <b>All content (unless otherwise specified) is subject to the <a href="https://raw.githubusercontent.com/worldbank/template/main/LICENSE">World Bank Master Community License Agreement.</a></b>
+    </div>
 
 #######################################################################################
 # Execution settings

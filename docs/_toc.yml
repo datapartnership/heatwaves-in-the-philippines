@@ -1,19 +1,2 @@
 format: jb-book
-root: README
-
-parts:
-  # - caption: Heatwave data Collaborative
-  #   numbered: True
-  #   chapters:
-  #     - file: static/Heatwaves Data Collaborative.pdf
-  #     - file: notebooks/world-bank-package.ipynb
-  #     - file: notebooks/nasa-apod.ipynb
-  - caption: Heatwaves in the Philippines
-    chapters:
-      - file: notebooks/measuring-heatwaves/heatwaves-in-philippines.ipynb
-      # - url: https://wbdatalab.org
-      #   title: World Bank Data Lab
-      # - url: https://www.worldbank.org/en/about/unit/unit-dec
-      #   title: World Bank DEC
-      # - url: https://www.worldbank.org/en/research/dime
-      #   title: World Bank DIME
+root: notebooks/measuring-heatwaves/heatwaves-in-philippines.ipynb
