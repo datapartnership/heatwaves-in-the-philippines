@@ -1,22 +1,20 @@
 [build-system]
-requires = ["setuptools>=61.0.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling>=1.21.0", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
 
 [project]
 name = "heatwaves"
-dynamic = ["version"]
-description = "Package for mesuring impact of and vulnerability to heatwaves created by the WB Data Lab"
-readme = {file = "README.md", content-type = "text/markdown"}
-license = {file = "LICENSE"}
-keywords = ["world bank", "climate change", "heatwave"]
-authors = [
-  {name="World Bank Data Lab", email="datalab@worldbank.org"},
-]
+description = "Package for measuring impact of and vulnerability to heatwaves created by the WB Data Lab"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+keywords = ["climate change", "heatwaves", "world bank"]
+authors = [{ name = "World Bank Data Lab", email = "datalab@worldbank.org" }]
 maintainers = [
-  {name="Sahiti Sarva", email="ssarva@worldbank.org"},
+	{ name = "Sahiti Sarva", email = "ssarva@worldbank.org" },
+	{ name = "Gabriel Stefanini Vicente", email = "gvicente@worldbank.org" },
 ]
 classifiers = [
-    "Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3",
 	"Programming Language :: Python :: 3.7",
 	"Programming Language :: Python :: 3.8",
 	"Programming Language :: Python :: 3.9",
@@ -27,15 +25,29 @@ classifiers = [
 	"Intended Audience :: Developers",
 	"Operating System :: OS Independent",
 ]
-requires-python = ">=3.7"
-dependencies = []
-[project.optional-dependencies]
-notebook = ["notebook>=6.5.2"]
+dynamic = ["version"]
 
+requires-python = ">=3.7"
+[project.optional-dependencies]
+docs = [
+	"docutils==0.17.1",     # https://jupyterbook.org/en/stable/content/citations.html?highlight=docutils#citations-and-bibliographies
+	"jupyter-book>=0.15.1",
+]
 [project.urls]
 "Homepage" = "https://github.com/datapartnership/heatwaves"
 "Bug Reports" = "https://github.com/datapartnership/heatwaves/issues"
 "Source" = "https://github.com/datapartnership/heatwaves"
 
-[tool.setuptools.dynamic]
-version = {attr = "heatwaves.__version__"}
+[tool.codespell]
+skip = './.git,docs/_build,docs/references.bib,*.py,*.R,*.png,*.gz,*.whl'
+ignore-regex = '^\s*"image\/png":\s.*'
+ignore-words-list = "gost,"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/heatwaves"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
