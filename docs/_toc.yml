@@ -11,6 +11,8 @@ parts:
   - caption: Heatwaves in the Philippines
     chapters:
       - file: notebooks/measuring-heatwaves/heatwaves-in-philippines.ipynb
+      - file: notebooks/socio-economic-indicators/census.ipynb
+      - file: notebooks/air-pollution/air-pollution.ipynb
       # - url: https://wbdatalab.org
       #   title: World Bank Data Lab
       # - url: https://www.worldbank.org/en/about/unit/unit-dec
