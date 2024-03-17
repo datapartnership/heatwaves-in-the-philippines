@@ -1,0 +1,11 @@
+name: heatwaves
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - geopandas
+  - netCDF4
+  - shapely
+  - rioxarray
+  - xarray

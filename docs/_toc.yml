@@ -1,4 +1,5 @@
 format: jb-book
+
 root: README
 
 parts:
@@ -19,3 +20,5 @@ parts:
       #   title: World Bank DEC
       # - url: https://www.worldbank.org/en/research/dime
       #   title: World Bank DIME
+=======
+root: notebooks/measuring-heatwaves/heatwaves-in-philippines.ipynb

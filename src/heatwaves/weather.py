@@ -1,4 +1,3 @@
-
 import math
 from .geographic import *
 
@@ -41,10 +40,12 @@ def combine_tmax_rh(tmax, rh):
     rh = rh.to_dask_dataframe()
     hi = tmax.merge(rh, on = ['time', 'lat', 'lon'])
 
+
     return hi
 
 
 def classify_heat_index(x, t=0, rh=0):
+
     if x==103 and rh<95 and t>86 and t<90:
         return 3
     elif x>125:
@@ -58,13 +59,16 @@ def classify_heat_index(x, t=0, rh=0):
     else:
         return 0
     
+
 def get_heat_index(ds_tasmax, ds_rh, shapefile):
     tmax = clip_area(ds_tasmax, shapefile)
     rh = clip_area(ds_rh, shapefile)
 
     hi = combine_tmax_rh(tmax, rh)
+
     hi['heat_index'] = hi.apply(lambda x: calculate_heat_index(x['Tasmax_F'], x['RH_f_inst']), meta = (None, 'float64'), axis=1)
 
     hi = hi.compute()
 
     return hi
+
