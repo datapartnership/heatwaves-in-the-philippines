@@ -15,9 +15,6 @@ maintainers = [
 ]
 classifiers = [
 	"Programming Language :: Python :: 3",
-	"Programming Language :: Python :: 3.7",
-	"Programming Language :: Python :: 3.8",
-	"Programming Language :: Python :: 3.9",
 	"Programming Language :: Python :: 3.10",
 	"Programming Language :: Python :: 3.11",
 	"Programming Language :: Python :: 3 :: Only",
@@ -34,9 +31,9 @@ docs = [
 	"jupyter-book>=0.15.1",
 ]
 [project.urls]
-"Homepage" = "https://github.com/datapartnership/heatwaves"
-"Bug Reports" = "https://github.com/datapartnership/heatwaves/issues"
-"Source" = "https://github.com/datapartnership/heatwaves"
+"Homepage" = "https://github.com/datapartnership/heatwaves-in-the-philippines"
+"Bug Reports" = "https://github.com/datapartnership/heatwaves-in-the-philippines/issues"
+"Source" = "https://github.com/datapartnership/heatwaves-in-the-philippines"
 
 [tool.codespell]
 skip = './.git,docs/_build,docs/references.bib,*.py,*.R,*.png,*.gz,*.whl'
